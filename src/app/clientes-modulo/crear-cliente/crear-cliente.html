@@ -3,7 +3,7 @@
    <div class="h4" i18n>Creación de Clientes</div>
    <form
      [formGroup]="clientForm"
-     (ngSubmit)="!clientForm.invalid && crearCliente(clientForm.value)"
+     (ngSubmit)="!clientForm.invalid && crearCliente()"
    >
      <div class="form-group mx-sm-3 mb-2">
        <label for="name"> Nombre Completo * </label>
@@ -11,23 +11,23 @@
          novalidate
          id="name"
          class="form-control"
-         formControlName="name"
-         placeholder="Introduzca su nombre completo"
+         formControlName="nombre"
+         placeholder="Nombre Completo"
        />
        <div
          class="alert alert-danger alert-dismissible fade show"
          *ngIf="
-           clientForm.get('name')?.hasError('required') &&
-           clientForm.get('name')?.touched
+           clientForm.get('nombre')?.hasError('required') &&
+           clientForm.get('nombre')?.touched
          "
        >
-         Name requiredo
+         Nombre requerido
        </div>
        <div
          class="alert alert-danger alert-dismissible fade show"
          *ngIf="
-           clientForm.get('name')?.hasError('minlength') &&
-           clientForm.get('name')?.touched
+           clientForm.get('nombre')?.hasError('minlength') &&
+           clientForm.get('nombre')?.touched
          "
        >
          Nombre demasiado corto. Debe tener al menos 2 carácteres
@@ -40,15 +40,15 @@
          id="address"
          type="text"
          class="form-control"
-         formControlName="address"
-         placeholder="Your Address"
+         formControlName="direccion"
+         placeholder="Dirección"
        />
 
        <div
          class="alert alert-danger alert-dismissible fade show"
          *ngIf="
-           clientForm.get('address')?.hasError('required') &&
-           clientForm.get('address')?.touched
+           clientForm.get('direccion')?.hasError('required') &&
+           clientForm.get('direccion')?.touched
          "
        >
          Dirección Requerida
@@ -62,7 +62,7 @@
          type="text"
          class="form-control"
          formControlName="email"
-         placeholder="Your Email"
+         placeholder="Email"
        />
        <div
          class="alert alert-danger alert-dismissible fade show"
@@ -71,7 +71,7 @@
            clientForm.get('email')?.touched
          "
        >
-         Email requiredo
+         Email Requerido
        </div>
        <div
          class="alert alert-danger alert-dismissible fade show"
@@ -85,7 +85,7 @@
      </div>
 
      <div class="row m-3 small">
-       <p>* Campos requeridos </p>
+       <p>* Campos Requeridos </p>
      </div>
 
      <div class="row m-3">

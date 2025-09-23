@@ -11,6 +11,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 //Servicio
 import { ClientesServicio } from '../clientes-servicio';
 
+//Interfaz
+import { Cliente } from '../cliente.model';
+
 @Component({
   selector: 'app-crear-cliente',
   imports: [ ReactiveFormsModule, CommonModule],
@@ -27,18 +30,25 @@ export class CrearCliente implements OnInit {
 
   ngOnInit() {
     this.clientForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      address: ['', Validators.required],
+      nombre: ['', [Validators.required, Validators.minLength(2)]],
+      direccion: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]]
     })
 
   }
 
-  crearCliente(datos: any) {
-    this.clientesServicio.crearCliente(datos);
-    console.log('cliente creado', datos)
-    this.clientForm.reset();
-    
+  crearCliente() {
+    if(this.clientForm.valid) {
+      const datos: Omit<Cliente, 'id'> = this.clientForm.value;
+
+      this.clientesServicio.crearCliente(datos);
+
+      console.log('Cliente creado', datos);
+      this.clientForm.reset();
+
+
+    }
+
 
   }
 

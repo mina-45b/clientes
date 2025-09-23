@@ -5,6 +5,9 @@ import { ClientesServicio  } from '../clientes-servicio';
 
 import { CommonModule } from '@angular/common';
 
+//Interfaz
+import { Cliente } from '../cliente.model';
+
 @Component({
   selector: 'app-lista-de-clientes',
   imports: [ CommonModule],
@@ -13,7 +16,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ListaDeClientes implements OnInit{
 
-  clientes: any[]= []
+  clientes: Cliente[]= []
 
   constructor(private clientesServicio: ClientesServicio){}
 
