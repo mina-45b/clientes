@@ -22,10 +22,11 @@ export class ClientesServicio {
     this.clientesSubject.next([...this.clientes]);
 
     console.warn("el cliente fue creado", nuevoCliente);
-    
-
-  
-
   }
-    
+  
+  getCliente(): Observable<any[]> {
+    return this.clientesSubject.asObservable();
+  }
+
+
 }

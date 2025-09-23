@@ -1,1 +1,8 @@
-<p>lista-de-clientes works!</p>
+<h2> Lista de Clientes </h2>
+<ul>
+    <li *ngFor="let cliente of clientes">
+        {{cliente.name}} - {{cliente.address}} - {{cliente.email}}
+    </li>
+</ul>
+
+<p *ngIf="clientes.length === 0">No hay clientes todavía</p>

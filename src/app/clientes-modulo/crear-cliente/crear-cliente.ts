@@ -36,6 +36,7 @@ export class CrearCliente implements OnInit {
 
   crearCliente(datos: any) {
     this.clientesServicio.crearCliente(datos);
+    console.log('cliente creado', datos)
     this.clientForm.reset();
     
 
