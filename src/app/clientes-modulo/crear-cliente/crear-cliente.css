@@ -1,0 +1,43 @@
+input{
+    padding: 8px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    background-color: #f0f0f0;
+    border-color: 1px solid #ccc;
+    outline: none;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label.required::after{
+    content: "*";
+    color: red;
+    margin-left: 5px;
+}
+
+.btn-success{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-success:active{
+    background-color: #3e8e41;
+}
+
+.btn-success:disabled{
+    background-color: #3c6c3d;
+}
+

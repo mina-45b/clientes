@@ -1,12 +1,14 @@
 <div class="container-fluid">
  <div class="col-4 p-3">
-   <div class="h4" i18n>Creación de Clientes</div>
+   <div class="h4">
+    <h2>Creación de Clientes</h2>
+  </div>
    <form
      [formGroup]="clientForm"
      (ngSubmit)="!clientForm.invalid && crearCliente()"
    >
      <div class="form-group mx-sm-3 mb-2">
-       <label for="name"> Nombre Completo * </label>
+       <label for="name" class="required"> Nombre Completo </label> <br>
        <input
          novalidate
          id="name"
@@ -35,7 +37,7 @@
      </div>
 
      <div class="form-group mx-sm-3 mb-2">
-       <label for="address"> Dirección * </label>
+       <label for="address" class="required"> Dirección </label> <br>
        <input
          id="address"
          type="text"
@@ -56,7 +58,7 @@
      </div>
 
      <div class="form-group mx-sm-3 mb-2">
-       <label for="email"> Email * </label>
+       <label for="email" class="required"> Email </label> <br>
        <input
          id="email"
          type="text"
