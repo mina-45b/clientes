@@ -2,6 +2,12 @@
 
 Este proyecto es una aplicación sencilla desarrollada en **Angular** que permite crear y listar clientes de manera local, con almacenamiento temporal en un array. Está pensado como un ejemplo práctico para manejar módulos, componentes, servicios e interfaces en Angular.
 
+![Formulario para crear Cliente](Imagenes/crear-cliente.png)
+**Figura 1: Formulario para la creación de clientes**
+
+![Lista de Clientes](Imagenes/listar-cliente.png)
+**Figura 2: Tabla con la lista de clientes creados**
+
 ---
 
 ## Características principales
