@@ -52,7 +52,7 @@ src/app/
 
 ---
 
-## ▶️ Ejecución del proyecto
+## Ejecución del proyecto
 
 1. **Clonar el repositorio**
 
@@ -77,7 +77,7 @@ src/app/
 
 ---
 
-## 🧪 Pruebas unitarias
+## Pruebas unitarias
 
 Ejecutar los tests con jasmine el siguiente comando:
 
@@ -89,7 +89,7 @@ Esto ejecutará las pruebas configuradas en el servicio de clientes para comprob
 
 ---
 
-## 📜 Licencia
+##  Licencia
 
 Este proyecto está bajo la licencia MIT.
 ¡Siéntete libre de usarlo, modificarlo y mejorarlo!
