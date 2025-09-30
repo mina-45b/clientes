@@ -93,9 +93,3 @@ ng test
 
 Esto ejecutará las pruebas configuradas en el servicio de clientes para comprobar que se crean correctamente.
 
----
-
-##  Licencia
-
-Este proyecto está bajo la licencia MIT.
-¡Siéntete libre de usarlo, modificarlo y mejorarlo!
